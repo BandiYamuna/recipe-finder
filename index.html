@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Recipe Finder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Recipe Finder</div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    
+    <h1>Find Delicious Recipes Instantly</h1>
+    <p>Search your favorite meals by ingredient or dish name!</p>
+    <a href="#search" class="btn">Get Started</a>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container main">
+    <!-- Search Section -->
+    <section id="search" class="search-panel" aria-labelledby="search-heading">
+      <h2 id="search-heading" class="sr-only">Search recipes</h2>
+
+      <div class="controls">
+        <input 
+          id="query" 
+          type="text" 
+          placeholder="e.g. chicken, tomato, banana or 'Arrabiata'" 
+          aria-label="Search by ingredient or name" 
+        />
+        <div class="buttons">
+          <button id="by-ingredient" class="btn">Search by ingredient</button>
+          <button id="by-name" class="btn btn-ghost">Search by name</button>
+        </div>
+      </div>
+
+      <div class="quicktips">
+        Try ingredients like: 
+        <button class="chip">chicken</button> 
+        <button class="chip">rice</button> 
+        <button class="chip">egg</button> 
+        <button class="chip">potato</button>
+      </div>
+    </section>
+
+    <!-- Status Message -->
+    <section class="status-row">
+      <div id="status" role="status" aria-live="polite"></div>
+    </section>
+
+    <!-- Recipe Results -->
+    <section id="results" class="results-grid" aria-live="polite"></section>
+  </main>
+
+  <!-- Recipe Detail Panel -->
+  <aside id="detailPanel" class="detail-panel" aria-hidden="true">
+    <button id="closeDetail" class="close-btn" aria-label="Close details">&times;</button>
+    <div id="detailContent" class="detail-content"></div>
+  </aside>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <small>Data from TheMealDB • No authentication required • Built with plain HTML/CSS/JS</small>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
